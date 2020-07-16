@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 940185138}
   - component: {fileID: 940185137}
   - component: {fileID: 940185139}
+  - component: {fileID: 940185140}
   m_Layer: 0
   m_Name: First Person Player
   m_TagString: Untagged
@@ -316,6 +317,28 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &940185140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940185136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f739f74830840be4c921ea7838f83b9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  maxHunger: 200
+  maxThirst: 150
+  maxStamina: 100
+  minTemperature: 44
+  maxTemperature: 115
+  hungerIncreaseRate: 0.65
+  thirstIncreaseRate: 0.8
+  staminaDecreaseRate: 10
+  staminaRegenRate: 5
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +544,7 @@ GameObject:
   - component: {fileID: 1658467677}
   - component: {fileID: 1658467676}
   m_Layer: 8
-  m_Name: Plane
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

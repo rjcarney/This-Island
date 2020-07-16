@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 
     public float maxHealth, maxHunger, maxThirst, maxStamina, minTemperature, maxTemperature;
     public float hungerIncreaseRate, thirstIncreaseRate, staminaDecreaseRate, staminaRegenRate;
-    public float health, hunger, thirst, stamina, temperature;
+    private float health, hunger, thirst, stamina, temperature;
     private bool dead;
 
     // Start is called before the first frame update
@@ -54,14 +54,16 @@ public class Player : MonoBehaviour
         print("You have died");
     }
 
+    public void Drink(float decreaseRate) {
+        thirst -= decreaseRate;
+    }
+
+    public void Eat(float decreaseRate) {
+        hunger -= decreaseRate;
+    }
+
     void OnTriggerEnter(Collider other) {
-        if(other.tag == "Food") {
-
-        }
-
-        if (other.tag == "Water") {
-
-        }
+        
     }
 
     void OnTriggerExit(Collider other) {
